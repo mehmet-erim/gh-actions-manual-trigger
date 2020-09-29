@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-       with:
-        ref: ${{ github.event.inputs.commit_key }}
+
     - run: |
         echo "Hello ${{ github.event.inputs.commit_key }}!"
+        git checkout ${{ github.event.inputs.commit_key }}
         cat README.md
