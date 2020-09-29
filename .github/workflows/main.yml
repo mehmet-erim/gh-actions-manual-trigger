@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: 7d004c7b653f35b32543780be3ce7809a324c558
+        ref: "${{ github.event.inputs.logLevel }}"
 
     - run: cat README.md
