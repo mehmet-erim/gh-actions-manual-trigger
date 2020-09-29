@@ -2,7 +2,7 @@ name: Manually triggered workflow
 on:
   workflow_dispatch:
     inputs:
-      commit_key:
+      commitKey:
         description: 'Commit key or branch name to checkout'
         required: true
         default: 'master'
@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: "${{ github.event.inputs.logLevel }}"
+        ref: "${{ github.event.inputs.commitKey }}"
 
     - run: | 
-        echo "commit key: ${{ github.event.inputs.logLevel }}"
+        echo "commit key: ${{ github.event.inputs.commitKey }}"
         cat README.md
