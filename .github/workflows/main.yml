@@ -15,4 +15,6 @@ jobs:
       with:
         ref: "${{ github.event.inputs.logLevel }}"
 
-    - run: cat README.md
+    - run: | 
+        echo "commit key: ${{ github.event.inputs.logLevel }}"
+        cat README.md
