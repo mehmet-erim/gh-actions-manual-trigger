@@ -14,6 +14,6 @@ jobs:
     - name: Checkout
     - uses: actions/checkout@v2
       with:
-        ref: "{{ github.event.inputs.commit_key }}"
+        ref: 7d004c7b653f35b32543780be3ce7809a324c558
 
     - run: cat README.md
